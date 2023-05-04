@@ -9,5 +9,5 @@ class NubbinBattery(Battery):
         
     def needs_service(self):
         service_threshold = self.last_service_date.replace(year=self.last_service_date.year + 4)
-        return service_threshold < self.current_date
+        return service_threshold <= self.current_date
          
